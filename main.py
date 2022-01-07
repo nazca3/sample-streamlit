@@ -36,7 +36,11 @@ if uploaded_file is not None:
         att = result['faceAttributes']
         age = att['age']
         gender = att['gender']
-        size = int(rect['width']/10)
+        if (genter=="male"):
+            gender = "man"
+        else:
+            gender = "woman"
+        size = int(rect['width']/6)
     
         draw = ImageDraw.Draw(img)
         draw.rectangle([(rect['left'],rect['top']),(rect['left']+rect['width'],rect['top']+rect['height'])],fill=None,outline="red",width=5)
