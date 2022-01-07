@@ -46,7 +46,7 @@ if uploaded_file is not None:
         draw.rectangle([(rect['left'],rect['top']),(rect['left']+rect['width'],rect['top']+rect['height'])],fill=None,outline="red",width=5)
         
         font = ImageFont.truetype("Roboto-Regular.ttf", size=size)
-        draw.text((rect['left'],rect['top']-size),gender+str(int(age))),font=font)
+        draw.text((rect['left'],rect['top']-size),gender+str(int(age)),font=font)
         
       
     st.image(img, caption='uploaded Image.', use_column_width=True)
