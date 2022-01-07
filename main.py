@@ -41,7 +41,7 @@ if uploaded_file is not None:
         draw = ImageDraw.Draw(img)
         draw.rectangle([(rect['left'],rect['top']),(rect['left']+rect['width'],rect['top']+rect['height'])],fill=None,outline="red",width=5)
         
-        font = ImageFont.truetype("arial.ttf", size=size)
+        font = ImageFont.truetype("Roboto-Regular.ttf", size=size)
         draw.text((rect['left'],rect['top']-size),str((age))+str((gender)),font=font)
         
       
