@@ -36,7 +36,7 @@ if uploaded_file is not None:
         att = result['faceAttributes']
         age = att['age']
         gender = att['gender']
-        if (genter=="male"):
+        if genter=="male":
             gender = "man"
         else:
             gender = "woman"
