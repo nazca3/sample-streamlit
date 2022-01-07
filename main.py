@@ -37,16 +37,16 @@ if uploaded_file is not None:
         age = att['age']
         gender = att['gender']
         if gender=="male":
-            gender = "man"
+            gender = "男性"
         else:
-            gender = "woman"
+            gender = "女性"
         size = int(rect['width']/6)
-    
+        pos = int(size*1.5)
         draw = ImageDraw.Draw(img)
         draw.rectangle([(rect['left'],rect['top']),(rect['left']+rect['width'],rect['top']+rect['height'])],fill=None,outline="red",width=5)
         
         font = ImageFont.truetype("NotoSansJP-Regular.otf", size=size)
-        draw.text((rect['left'],rect['top']-size),gender+str(int(age)),font=font)
+        draw.text((rect['left'],rect['top']-pos),gender+str(int(age)),font=font)
         
       
     st.image(img, caption='uploaded Image.', use_column_width=True)
